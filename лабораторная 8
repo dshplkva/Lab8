@@ -3,7 +3,7 @@ from random import randint # Подключение модуля для рабо
 logging.basicConfig(filename = 'py.log', level = logging.INFO)
 while True: # Цикл обработки ввода целого числа
     try:
-        N = int(input('Введите количество бочонков(елое положительное число): '))
+        N = int(input('Введите количество бочонков (целое положительное число): '))
         break
     except ValueError:
         print('Ошибка ввода. Попробуйте еще раз')
