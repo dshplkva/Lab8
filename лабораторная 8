@@ -1,0 +1,20 @@
+import logging
+from random import randint # Подключение модуля для работы со случайной генерацией чисел
+logging.basicConfig(filename = 'py.log', level = logging.INFO)
+while True: # Цикл обработки ввода целого числа
+    try:
+        N = int(input('Введите количество бочонков(елое положительное число): '))
+        break
+    except ValueError:
+        print('Ошибка ввода. Попробуйте еще раз')
+numbers = []  # Создание списка чисел
+for j in range(N):  # Заполнение списка чисел от 1 до N
+    numbers .append(j+1)
+for i in range(N):
+    input('Нажмите Enter чтобы вытащить следующий бочонок')
+    new_random =randint(0, len(numbers ) - 1)
+    print(f'Бочонок под номером {i+1}: ', numbers [new_random])
+    logging.info(numbers [new_random])
+    numbers .pop(new_random)
+
+print('Бочонки закончились')
